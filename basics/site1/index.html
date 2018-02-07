@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html/css basics</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="owl.carousel.min.css" />
+	<link rel="stylesheet" href="owl.theme.default.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="topbar">
+		<div class="topbar_group leftaligned">
+			<a href="mailto:bg@bl.com"><span class="icon">✉</span> this.email@mail.com</a>
+			<a class="phone_number" href="tel:0000000000"><span class="icon">☏</span> 00 00 00 00 00</a>
+			<!-- social -->
+			<a class="social-icon" href="facebook.com"><span class="icon">☒</span></a>
+			<a class="social-icon" href="twitter.com"><span class="icon">☒</span></a>
+			<a class="social-icon" href="instagram.com"><span class="icon">☒</span></a>
+			<a class="social-icon" href="pinterest.com"><span class="icon">☒</span></a>
+		</div>
+		<div class="topbar_group rightaligned">
+			<a id="langSelector" href="#"> <img src="images/uk_flag.png"> </a>
+		</div>
+	</div>
+	<div class="navbar">
+		<div class="branding">
+			<img class="logo" src="images/beats.png"></img>
+		</div>
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">Shop</a>
+			<a href="#">Company</a>
+			<a href="#">Featured</a>
+		</nav>
+	</div>
+
+	<div class="owl-carousel owl-theme">
+		<picture>
+			<source srcset="images/editorial_xwide.jpg" media="(min-width: 800px)">
+			<source srcset="images/editorial_wide.jpg" media="(min-width: 600px)">
+			<img src="images/editorial_medium.jpg">
+		</picture>
+		<picture>
+			<source srcset="images/editorial_xwide.jpg" media="(min-width: 800px)">
+			<source srcset="images/editorial_wide.jpg" media="(min-width: 600px)">
+			<img src="images/editorial_medium.jpg">
+		</picture>
+		<picture>
+			<source srcset="images/editorial_xwide.jpg" media="(min-width: 800px)">
+			<source srcset="images/editorial_wide.jpg" media="(min-width: 600px)">
+			<img src="images/editorial_medium.jpg">
+		</picture>
+		<picture>
+			<source srcset="images/editorial_xwide.jpg" media="(min-width: 800px)">
+			<source srcset="images/editorial_wide.jpg" media="(min-width: 600px)">
+			<img src="images/editorial_medium.jpg">
+		</picture>
+	</div>
+
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="owl.carousel.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.owl-carousel').owlCarousel({
+				// loop:true,
+				// nav:true,
+				items:1
+			});
+		});
+	</script>
+</body>
+</html>

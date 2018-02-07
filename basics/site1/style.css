@@ -1,0 +1,77 @@
+html{
+	width: 100%;
+	height: 100%;
+	font-family: sans-serif;
+}
+a:hover{
+	color: #276CD9;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+/* topbar */
+.topbar{
+	color: #4D4D4D;
+	font-weight: lighter;
+	background-color: #EFEFEF;
+	border-bottom: thin solid #E0E0E0;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 15px;
+}
+.topbar_group > *{
+	margin-right: 15px;
+	display: inline-block;
+}
+.topbar_group > *:last-child{
+	margin: 0;
+}
+.rightaligned{
+	align-self: flex-end;
+}
+#langSelector img{
+	height: 14px;
+}
+.phone_number{
+	font-size: 0.9em;
+}
+.topbar .icon{
+	font-size: 1.2em;
+}
+
+/* navbar */
+.navbar{
+	height: 60px;
+	padding: 20px 30px;
+	border-bottom: thin solid #E0E0E0;
+	display: flex;
+	align-items: center;
+}
+.branding{
+	height: 100%;
+}
+.branding .logo{
+	height: 100%;
+	margin-right: 15px;
+}
+nav a{
+	margin: 0 15px;
+	text-transform: uppercase;
+	color: #1C1C1C;
+}
+
+.owl-dots{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: white;
+	padding: 10px 10px 0 10px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.owl-carousel picture{
+	width: 100%;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>accessibility demo</title>
+	<style type="text/css">
+		html, body{
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+			font-size: 100%;
+			line-height: 1.9em;
+		}
+		header{
+			display: flex;
+			align-items: center;
+			padding: 20px;
+			box-sizing: border-box;
+			height: 100px;
+			background-color: #eee;
+		}
+		main{
+			padding: 20px;
+			margin: auto;
+			max-width: 600px;
+			font-size: 1.15em;
+		}
+		nav a{
+			display: inline-block;
+			margin: 10px;
+		}
+		a{
+			background-color: #5BC57A;
+			text-decoration: none;
+			color: inherit;
+		}
+		h1 a, nav a, .imglink{
+			background-color: transparent;
+		}
+		.imglink:hover, .imglink:focus{
+			outline-style: solid;
+			outline-color: #5BC57A;
+		}
+		a:hover, a:focus{
+			color: #5BC57A;
+			background-color: transparent;
+		}
+
+
+		#skip_to_main{
+			margin: 10px;
+			display: inline-block;
+		}
+		#skip_to_main:not(:focus){
+			position: absolute;
+			opacity: 0;
+		}
+		.flex_space{
+			flex: 1 1;
+		}
+		
+		article{
+			width: 100%;
+		}
+
+		
+		#images img{
+			width: 100%;
+		}
+
+		.hidden{
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href="#">Accessibility</a></h1>
+		<a tabindex="1" id="skip_to_main" href="#main">skip to main content</a>
+		<div class="flex_space"></div>
+		<nav>
+			<a href="#">Some</a>
+			<a href="#">Menu</a>
+			<a href="#">Items</a>
+			<a href="#">Here</a>
+		</nav>
+	</header>
+
+	<main id="main">
+		<h2>Contents</h2>
+		<ul>
+			<li><a href="#screen_reader">screen reader</a></li>
+			<li><a href="#skip_link">skip link</a></li>
+			<li><a href="#images">images</a></li>
+			<li><a href="#resources">resources</a></li>
+		</ul>
+		
+		<article id="screen_reader">
+			<h2>Screen Reader</h2>
+			<p>screen reader demo</p>
+		</article>
+
+		<article id="skip_link">
+			<h2>skip link</h2>
+			<p>A skip link allows the user to skip the navigation links and move focus directly to
+			the main content. They are useful even for non-disabled users</p>
+			<p>There is one on this page</p>
+		</article>
+
+		<article id="images">
+			<h2>images</h2>
+			
+			<p>With alt attribute</p>
+			<p><img src="./supdeweb-logo.jpg" alt="Supdeweb Logo"></p>
+
+			<p>without alt attribute</p>
+			<p><img src="./supdeweb-logo.jpg"></p>
+
+			<p>empty alt attribute</p>
+			<p><img src="./supdeweb-logo.jpg" aria-hidden="true"></p>
+
+			<p>link with alt</p>
+			<a href="www.google.com" class="imglink"><img src="./img1.jpg" alt="google"></a>
+
+			<p>link with empty alt</p>
+			<a href="www.google.com" class="imglink"><img src="./img1.jpg" alt=""></a>
+
+			<p>link without alt</p>
+			<a href="http://www.google.com" class="imglink"><img src="./img1.jpg"></a>
+		</article>
+
+		<article id=ressources>
+			<h2>Resources</h2>
+			<p>A few useful websites and articles about accessibility (a11y)</p>
+			<ul>
+				<li><a href="https://a11yproject.com">a11y project</a></li>
+				<li><a href="https://a11yproject.com/checklist">accessibility checklist</a></li>
+				<li><a href="https://webaim.org/">webaim</a></li>
+				<li><a href="https://webaim.org/articles/voiceover/">webaim > voiceover</a></li>
+			</ul>
+		</article>
+	</main>
+</body>
+</html>
