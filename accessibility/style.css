@@ -70,3 +70,19 @@ a:hover, a:focus{
 .hidden{
 	visibility: hidden;
 }
+
+/* this is just to demonstrate the use of media queries */
+/* the '500' value was chosen because that's where the menu breaks down */
+@media screen and (max-width: 500px) {
+	header{
+		flex-direction: column;
+		padding: 0;
+		height: auto;
+	}
+	header h1{
+		margin-bottom: 4px;
+	}
+	header a{
+		margin-top: 0;
+	}
+}
