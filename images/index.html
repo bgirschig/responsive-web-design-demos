@@ -3,13 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>images</title>
-	<link rel="stylesheet" type="text/css" href="/_common/style.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style type="text/css">
-		img{
-			width: 100%;
-		}
-	</style>
 </head>
 
 <body>
@@ -19,7 +14,7 @@
 
 	<div class="main_content" id="section_picture" >
 		<h2 id="img">img</h2>
-		<img src="editorial_big.jpg">
+		<img src="img/editorial_big.jpg">
 	</div>
 
 	<div class="main_content" id="section_picture" >
@@ -27,12 +22,11 @@
 		<p>The Picture element allows forcing the browser to choose a given source, with rigid rules</p>
 		
 		<picture style="width: 100%; display: block;">
-			<source media="(min-width: 750px)" srcset="editorial_x-wide.jpg">
-			<source media="(min-width: 650px)" srcset="editorial_wide.jpg">
-			<source media="(max-aspect-ratio: 2)" srcset="editorial_big.jpg">
-			<img src="editorial_smol.jpg" alt="image">
+			<source media="(min-width: 750px)" srcset="img/editorial_x-wide.jpg">
+			<source media="(min-width: 650px)" srcset="img/editorial_wide.jpg">
+			<source media="(max-aspect-ratio: 2)" srcset="img/editorial_big.jpg">
+			<img src="img/editorial_smol.jpg" alt="image">
 		</picture>
-
 	</div>
 
 	<div class="main_content" id="section_srcset" >
@@ -40,10 +34,10 @@
 		<p>srcset "declares" different versions of the image, for different sizes. The browser then decides which is best.
 		This is quite future-proof, because browsers will get better at figuring out what they need</p>
 		<p>
-			<img src    = "1000x900.png"
+			<img src    = "img/1000x900.png"
 				 sizes  = "70vw"
-				 srcset = "300x200.png 500w,
-				 		   600x400.png 800w"
+				 srcset = "img/300x200.png 500w,
+				 		   img/600x400.png 800w"
 				 >
 		</p>
 	</div>
@@ -58,8 +52,8 @@
 	<div class="main_content" id="section_image_formats" >
 		<h2>Image formats</h2>
 		<h3>Svg</h3>
-		<img src="supdeweb-logo.svg" style="">
-		<img src="editorial_huge.svg">
+		<img src="img/supdeweb-logo.svg" style="">
+		<img src="img/editorial_huge.svg">
 		<ul class="pros_and_cons">
 			<li class="pro">Very light (for vector-like images)</li>
 			<li class="pro">Works at any scale</li>
@@ -70,16 +64,15 @@
 		</ul>
 
 		<h3>jpg</h3>
-		<img src="supdeweb-logo.jpg">
+		<img src="img/supdeweb-logo.jpg">
 		<ul class="pros_and_cons">
 			<li class="pro">Best choice for photographs</li>
 			<li class="con">lossy compression</li>
 			<li class="pro">lossy compression</li>
-
 		</ul>
 
 		<h3>png</h3>
-		<img src="jpg_vs_png.png">
+		<img src="img/jpg_vs_png.png">
 		<ul class="pros_and_cons">
 			<li class="pro">Best choice for line drawings, images with text, etc...</li>
 			<li class="pro">transparency</li>
@@ -98,8 +91,8 @@
 
 		<h3>webp</h3>
 		<picture>
-        	<source type="image/webp" srcset="editorial_huge.webp">
-			<img src="editorial_huge_2.jpg" alt="">
+        	<source type="image/webp" srcset="img/editorial_huge.webp">
+			<img src="img/editorial_huge_2.jpg" alt="">
       	</picture>
 		<ul class="pros_and_cons">
 			<li class="pro">lossy and lossless compression can be used</li>

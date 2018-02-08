@@ -1,0 +1,90 @@
+li{
+	list-style-type: none;
+}
+ul{
+	padding-left: 0;
+	margin: 0;
+}
+
+body{
+	box-sizing: border-box;
+	padding: 20px;
+	font-family: georgia, serif;
+
+	width: 100%;
+	max-width: 950px;
+
+	margin-bottom: 50vh;
+	margin: auto;
+}
+
+a, a:visited{
+	text-decoration: none;
+	color: #3943DB;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+h1,h2,h3{
+	font-family: helvetica, sans-serif;
+}
+h3{
+	margin-top: 1.5em;
+	margin-bottom: 0.3em;
+}
+p{
+	margin: 0em;
+	margin-bottom: 1em;
+}
+header{
+	text-align: center;
+	margin-bottom: 40px;
+}
+.main_content{
+	width: 100%;
+	max-width: 700px;
+	border-bottom: thin solid black;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	margin: auto;
+}
+
+header p {font-size: 1.125em }
+.main_content p {font-size: 1.125em }
+
+@media (min-width: 600px){
+	/* h1{font-size: 2em } */
+	/* h2{font-size: 1.5em } */
+	header p {font-size: 1.5em }
+	.main_content p {font-size: 1.3em }
+}
+
+.pros_and_cons li{
+	font-family: helvetica, sans-serif;
+	margin-bottom: 2px;
+}
+.links_list hr{
+	display: inline-block;
+	width: 50%;
+}
+.pros_and_cons li:before{
+	width: 10px;
+	padding: 3px 5px;
+	display: inline-block;
+	margin-right: 5px;
+	color: white;
+	text-align: center;
+}
+.pros_and_cons .pro:before{
+	content: "+";
+	background-color: #35D12C;
+}
+.pros_and_cons .con:before{
+	content: "-";
+	background-color: #F53A45;
+}
+
+img{
+	width: 100%;
+}
