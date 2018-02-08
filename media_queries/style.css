@@ -1,12 +1,11 @@
+/* basic page layout */
 body, html{
 	margin: 0;
 	padding: 0;
+	font-family: sans-serif;
 }
 h1{
 	margin: 0;
-}
-h1:hover{
-	color: red;
 }
 header{
 	background-color: #F8F8F8;
@@ -14,18 +13,15 @@ header{
 	position: fixed;
 	width: 100%;
 	box-sizing: border-box;
-}
 
+	/* layout header's items */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 img{
 	width: 49%;
 }
-
-@media screen and (max-width: 500px) {
-	img{
-		width: 100%;
-	}
-}
-
 main{
 	margin: auto;
 	max-width: 700px;
@@ -33,36 +29,55 @@ main{
 	padding-top: 70px;
 }
 
-/* Nav */
-nav li{
-	list-style-type: none;
-}
+/* menu (either burger or 'normal') */
 nav ul{
+	/* reset list styles */
 	padding: 0;
 	margin: 0;
+
+	/* trick for css-only and no duplication menu */
+	padding-top: 25px;
+    margin-top: -25px;
+
+    /* use flexbox to easily layout menu items */
+    display: flex;
 }
-li{
+nav li{
+	list-style-type: none;
 	margin: 0 10px;
+	padding: 5px;
+}
+/* menu links styles */
+nav a{
+	text-decoration: none;
+	color: #3943DB;
+}
+nav li:hover{
+	background-color: #3943DB;
+}
+nav li:hover a{
+	color: white;
 }
 
-ul{
-	display: flex;
-}
-header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
+/* burger icon */
 nav img{
 	width: 30px;
 	display: none;
-	position: fixed;
+	position: fixed; /* don't show by default */
 	top: 14px;
 	right: 14px;
 }
+
+/* special case for images: when window is smaller than 500px wide, display as single column */
+@media screen and (max-width: 500px) {
+	img{
+		width: 100%;
+	}
+}
+
+/* "activate" burger menu */
 @media screen and (max-width: 400px) {
-	ul{
+	nav ul{
 		flex-direction: column;
 	}
 	nav img{
@@ -82,37 +97,3 @@ nav img{
 		right: 0;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
