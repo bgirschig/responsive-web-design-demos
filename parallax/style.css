@@ -1,0 +1,51 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+html { overflow: hidden; }
+
+/* chrome displays an annoying gap between divs without this. */
+*{ font-size: 0; }
+
+body {
+    /* "activer" la perspective*/
+    perspective: 3px;
+
+    /* autoriser le scroll vertical mais pas horizontal */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.parallaxBox{
+    /* fait en sorte que la position 3D détermine
+    quel élément s'affiche au dessus de quel autre */
+    transform-style: preserve-3d;
+}
+
+.parallaxBox .slide.low {
+    /* les éléments avec la classe "low" sont "enfoncés"
+    par rapport aux autres. Puisqu'ils sont plus loin, ils
+    apparaissent plus petits. on compense donc avec 'scale' */
+    transform: translateZ(-1.5px) scale(2);
+}
+
+.parallaxBox .slide img{
+    width: 100%;
+}
+h2{
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+    padding: 30px;
+    font-size: 20px;
+}
+
+/* below 460px wide, our parallax thing beaks because the lower image is too small and we see the sides */
+/* We disable the parallax in that case */
+@media screen and (max-width: 460px) {
+    body{ perspective: 0; }
+    .parallaxBox{ transform-style: flat; }
+    .parallaxBox .slide.low{ transform: none; }
+}
