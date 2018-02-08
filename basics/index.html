@@ -3,11 +3,15 @@
 <head>
 	<title>html/css basics</title>
 	<meta charset="utf-8">
-
-	<link rel="stylesheet" href="owl.carousel.min.css" />
-	<link rel="stylesheet" href="owl.theme.default.min.css" />
-
+	
+	<!-- reset styles -->
 	<link rel="stylesheet" type="text/css" href="reset.css">
+
+	<!-- owl caroussel default styles -->
+	<link rel="stylesheet" href="third_party/owl/owl.carousel.min.css" />
+	<link rel="stylesheet" href="third_party/owl/owl.theme.default.min.css" />
+
+	<!-- custom / page styles -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -15,7 +19,7 @@
 		<div class="topbar_group leftaligned">
 			<a href="mailto:bg@bl.com"><span class="icon">✉</span> this.email@mail.com</a>
 			<a class="phone_number" href="tel:0000000000"><span class="icon">☏</span> 00 00 00 00 00</a>
-			<!-- social -->
+			<!-- social buttons -->
 			<a class="social-icon" href="facebook.com"><span class="icon">☒</span></a>
 			<a class="social-icon" href="twitter.com"><span class="icon">☒</span></a>
 			<a class="social-icon" href="instagram.com"><span class="icon">☒</span></a>
@@ -38,6 +42,8 @@
 	</div>
 
 	<div class="owl-carousel owl-theme">
+		<!-- the images in the caroussel use the <picture> element, to choose which image to show
+		depending on window size -->
 		<picture>
 			<source srcset="images/editorial_xwide.jpg" media="(min-width: 800px)">
 			<source srcset="images/editorial_wide.jpg" media="(min-width: 600px)">
@@ -60,12 +66,13 @@
 		</picture>
 	</div>
 
-	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="owl.carousel.min.js"></script>
+	<script type="text/javascript" src="third_party/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="third_party/owl/owl.carousel.min.js"></script>
 	<script type="text/javascript">
+		// instanciate the owl caroussel
 		$(document).ready(function(){
 			$('.owl-carousel').owlCarousel({
-				// loop:true,
+				loop:true,
 				// nav:true,
 				items:1
 			});
